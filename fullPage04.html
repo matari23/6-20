@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.6.4.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script src="script/fullpage.min.js"></script>
+
+    <link rel="stylesheet" href="css/fullpage.css">
+
+    <script lang="java">
+        $(function(){
+            $("#fullpage").fullpage({
+                sectionsColor:["pink"],
+                slidesNavigation:true,
+                slidesNavPosition:"top",
+
+            })//fullpage
+        })//jq
+    </script>
+
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        .section{
+            text-align: center;
+        }
+
+        </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section" id="section01">
+
+            <div class="slide">
+                <h1>one slide section</h1>
+            </div><!-- slide -->
+            <div class="slide">
+                <h1>two slide section</h1>
+            </div><!-- slide -->
+            <div class="slide">
+                <h1>three slide section</h1>
+            </div><!-- slide -->
+            <div class="slide">
+                <h1>four slide section</h1>
+            </div><!-- slide -->
+            <div class="slide">
+                <h1>five slide section</h1>
+            </div><!-- slide -->
+
+        </div><!-- section01 -->
+
+    </div><!-- fullpage -->
+</body>
+</html>

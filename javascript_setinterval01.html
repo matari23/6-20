@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.6.4.js"></script>
+    
+    <style type="text/css">
+
+    *{margin: 0;padding: 0;}
+    ol,ul,li{list-style: none;}
+    ul{
+        position: relative;
+        width: 500px;
+        height: 500px;
+        margin: 100px auto;
+    }
+    ul li{
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        left: 0;top: 0;
+    }
+    ul li img{
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+    <script lang="java">
+        $(function(){
+            $("ul li").eq(0).siblings().hide();
+            var n=0;
+            var count = $("ul li").length - 1;
+
+            var intervalID = setInterval(function(){
+                $("ul li").eq(n).fadeOut();
+                if(n==count){
+                    n=0;
+                }else{
+                    n++;
+                }
+                $("ul li").eq(n).fadeIn();
+            },2000)
+
+            $("ul li").hover(function(){
+                clearInterval(intervalID);
+            },function(){
+                intervalID = setInterval(function(){
+                $("ul li").eq(n).fadeOut();
+                if(n==count){
+                    n=0;
+                }else{
+                    n++;
+                }
+                $("ul li").eq(n).fadeIn();
+            },2000)
+            })
+        })//jq
+    </script>
+</head>
+<body>
+    <ul>
+        <li><img src="imgs/bg1.jpg" alt="bg1"></li>
+        <li><img src="imgs/bg2.jpg" alt="bg2"></li>
+        <li><img src="imgs/bg3.jpg" alt="bg3"></li>
+        <li><img src="imgs/bg4.jpg" alt="bg4"></li>
+        <li><img src="imgs/bg5.jpg" alt="bg5"></li>
+    </ul>
+</body>
+</html>

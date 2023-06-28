@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.6.4.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script src="script/fullpage.min.js"></script>
+
+    <link rel="stylesheet" href="css/fullpage.css">
+
+    <script lang="java">
+        $(function(){
+            $("#fullpage").fullpage({
+                sectionsColor:["#1bbc9b","#4bbfc3","#ccddff"],
+                navigation:true,
+                navigationTooltips:["page1","page2","page3"],
+                showActiveTooltip:true,
+                menu:"#menu",
+                anchors:["firstpage","secondpage","thirdpage"]
+
+            })//fullpage
+        })//jq
+    </script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        li{list-style: none;}
+        a{text-decoration: none; color: inherit;}
+        #menu{
+            position: fixed;
+            height: 100px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #menu li{}
+        #menu li a{
+            display: block;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li data-menuanchor="anchor1"><a href="#firstpage">first menu</a></li>
+        <li data-menuanchor="anchor2"><a href="#secondpage">second menu</a></li>
+        <li data-menuanchor="anchor3"><a href="#thirdpage">third menu</a></li>
+    </ul><!-- menu -->
+    <div id="fullpage">
+        <div class="section" id="section0">
+            <div class="intro">
+                <h1>section0</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem
+                    ipsum dolor sit.
+                </p>
+            </div><!-- intro -->
+        </div><!-- section0 -->
+        <div class="section" id="section1">
+            <div class="intro">
+                <h1>section1</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem
+                    ipsum dolor sit.
+                </p>
+            </div><!-- intro -->
+        </div><!-- section1 -->
+        <div class="section" id="section2">
+            <div class="intro">
+                <h1>section02</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem
+                    ipsum dolor sit.
+                </p>
+            </div><!-- intro -->
+        </div><!-- section2 -->
+
+    </div><!-- fullpage -->
+</body>
+
+</html>

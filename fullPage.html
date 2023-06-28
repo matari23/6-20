@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fullpage.css">
+    <title>Document</title>
+
+    <script src="script/jquery-3.6.4.js"></script>
+    <script src="script/jquery-ui.min.js"></script>
+    <script src="script/fullpage.min.js"></script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        h1{
+            font-size: 5vh;
+            color: #fff;
+        }
+        .section{
+            /* text-align: center; */
+            background-size: cover;
+        }
+        #section0{
+            background-image: url(imgs/bg1.jpg);
+        }
+        #section1{
+            background-image: url(imgs/bg2.jpg);
+        }
+        #section2{
+            background-image: url(imgs/bg3.jpg);
+        }
+        #section3{
+            background-image: url(imgs/bg4.jpg);
+        }
+        #section4{
+            background-image: url(imgs/bg5.jpg);
+        }
+    </style>
+    <script lang="java">
+        $(function(){
+            $("#fullpage").fullpage({
+                navigation:true,
+                navigationPosition:"left",
+                KeyboardScrolling:true,
+                ScrollingSpeed:3000,
+
+            })//fullpage
+        })//jq
+    </script>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section" id="section0"><h1>fullpage 0</h1></div>
+        <div class="section" id="section1"><h1>fullpage 1</h1></div>
+        <div class="section" id="section2"><h1>fullpage 2</h1></div>
+        <div class="section" id="section3"><h1>fullpage 3</h1></div>
+        <div class="section" id="section4"><h1>fullpage 4</h1></div>
+    </div><!-- fullpage -->
+</body>
+</html>

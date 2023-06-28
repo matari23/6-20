@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+        //setTimeout(function(){}):일정 시간 후 함수를 한번 실행
+        //setInterval(function(){}):일정시간에 한번씩 함수를 반복해서 실행
+        //clearTimeout(id):일정 시간 후 함수를 한번 실행하는 것을 중지
+        //clearInterval(id):일정 시간마다 함수를 반복하는 것을 중지
+    
+    // setTimeout(function(){
+    //     alert("3초가 지났습니다.")
+    // },3000)
+
+    // setInterval(function(){
+    //     document.write("2초가 지났습니다.")
+    // },2000)
+
+    var intervalID = setInterval(function(){
+        document.write("<p>" + new Date() + "</p>")
+    },1000)
+    setTimeout(function(){
+        clearInterval(intervalID);
+    },10000)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

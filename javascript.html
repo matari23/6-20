@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script lang="java">
+        var output = "";
+
+        for(var i=0; i<=10; i++){
+            for(var j=0; j<i; j++){
+                output += "*"
+            }//j for
+            output += "<br>"
+        }//i for
+
+        document.write(output)
+
+        var num1 = Number(prompt("숫자를 입력하세요"))
+        var num2 =Number(prompt("숫자를 입력하세요"))
+        var op =prompt("연산기호를 입력하세요")
+
+        switch (op){
+            case "+":
+                c = num1 + num2; break;
+            case "-":
+                c = num1 - num2; break;
+            case "*":
+                c = num1 * num2; break;
+            case "/":
+                c = num1 / num2; break;
+            default:
+                document.write("잘못입력")
+        }
+        document.write("C " + c)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
